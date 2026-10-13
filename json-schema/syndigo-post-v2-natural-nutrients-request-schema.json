@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/syndigo/main/json-schema/syndigo-post-v2-natural-nutrients-request-schema.json",
+  "title": "PostV2NaturalNutrientsRequest",
+  "x-generated": "2026-10-12",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/syndigo-openapi-generated.yml#/components/schemas/PostV2NaturalNutrientsRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "string",
+      "description": "Natural language text describing the food."
+    }
+  },
+  "required": [
+    "query"
+  ]
+}

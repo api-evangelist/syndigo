@@ -1,0 +1,20 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docx.syndigo.com/developers/docs/api-authentication
+sources:
+- https://docx.syndigo.com/developers/docs/api-authentication
+- https://docx.syndigo.com/developers/docs/obtaining-api-keys-and-authenticating-api.md
+- https://docx.syndigo.com/developers/docs/environment-setup.md
+- https://docx.syndigo.com/developers/docs/getting-started-1.md
+description: Syndigo Integration APIs utilize a bearer token authentication scheme.
+schemes:
+- type: http-bearer
+  name: Bearer Token
+  evidence: Syndigo Integration APIs utilize a bearer token authentication scheme.
+  location: header
+  header: Authorization
+  token_url: https://api.uat.syndigo.com/api/auth?username=YourApiUsername&secret=YourUrlEncodedSecret
+  how_to_obtain: Call the Auth API by providing the username and secret as URL parameters or in the request body; extract the "Value" property
+    from the returned JSON object.
+docs: https://docx.syndigo.com/developers/docs/api-authentication

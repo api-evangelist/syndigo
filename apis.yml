@@ -1,23 +1,130 @@
 aid: syndigo
+
 name: Syndigo
-description: 'Syndigo is a company surfaced via the API Evangelist harvest backlog (source: data) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://syndigo.com/wp-content/uploads/2026/08/Screenshot-2026-08-19-at-10.38.38-AM.png
+
+description: Syndigo provides a Product Experience Cloud that helps brands and retailers manage master data, product information, syndication,
+  rich media, and analytics. Their platform enables seamless data exchange across supply chains, supporting industries such as manufacturing,
+  retail, CPG, foodservice, healthcare, and automotive. Syndigo’s solutions include master data management, product information management, syndication
+  services, conversion frameworks, and AI-driven tools, delivering comprehensive product content and insights to improve market reach and operational
+  efficiency.
+
 url: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:data
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-12 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-12'
+
 modified: '2026-10-12'
+
 tags:
 - Company
-apis: []
+- Data
+- MasterDataManagement
+- ProductInformationManagement
+- Syndication
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/syndigo-rules.yml
+- type: JSONLD
+  url: json-ld/syndigo-context.jsonld
+- type: Vocabulary
+  url: vocabulary/syndigo-vocabulary.yml
+- type: DataModel
+  url: data-model/syndigo-data-model.yml
+- type: Security
+  url: security/syndigo-vulnerability-disclosure.yml
+- type: Authentication
+  url: authentication/syndigo-authentication.yml
+- type: Conformance
+  url: conformance/syndigo-conformance.yml
+- type: LLMsTxt
+  url: llms/syndigo-llms.txt
+- type: Hosts
+  url: hosts/syndigo-hosts.yml
+- type: Vendors
+  url: vendors/syndigo-vendors.yml
+- type: TermsOfService
+  url: http://www.syndigo.com/terms-of-use
+- type: Support
+  url: https://syndigo.com/support/
+- type: PrivacyPolicy
+  url: https://syndigo.com/legal/privacy-notice/
+- type: Newsroom
+  url: https://syndigo.com/news/
+- type: DeveloperPortal
+  url: https://docx.syndigo.com/developers
+- type: Blog
+  url: https://syndigo.com/blog/
+- type: APIReference
+  url: https://docx.syndigo.com/developers/docs/api-reference
+- type: GettingStarted
+  url: https://docx.syndigo.com/developers/docs/environment-setup
+- type: Documentation
+  url: https://developer.syndigo.com/
+- type: VulnerabilityDisclosure
+  url: security/syndigo-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/syndigo-domain-security.yml
 - type: Website
   url: https://syndigo.com/
+- type: x-coverage
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript and no machine‑readable spec could be retrieved.
+  evidence:
+  - url: https://docx.syndigo.com/developers/docs/api-reference.md
+    status: 200
+  checked: '2026-10-12'
+  url: https://syndigo.com/
+
+apis:
+- aid: syndigo:syndigo-api
+  name: Syndigo API
+  description: 'Syndigo API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-12); not
+    the provider''s own document.'
+  humanURL: https://docx.syndigo.com/developers/docs/natural-language-for-nutrients
+  baseURL: https://api.uat.syndigo.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/syndigo-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/syndigo-post-v2-natural-nutrients-request-schema.json
+  - type: JSONSchema
+    url: json-schema/syndigo-post-v2-natural-nutrients-response-schema.json
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-12'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://community.syndigo.com/api/mcp
+    status: 403
+  - url: https://syndigo.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-12'
+  status: enriched
+  artifacts_added: 17
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
