@@ -94,21 +94,34 @@ common:
   url: https://syndigo.com/
 
 apis:
-- aid: syndigo:syndigo-api
-  name: Syndigo API
-  description: 'Syndigo API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-12); not
-    the provider''s own document.'
+- aid: syndigo:syndigo-auth-api
+  name: Syndigo Auth API
+  description: The Auth API from Syndigo — 2 operation(s) for auth.
   humanURL: https://docx.syndigo.com/developers/docs/natural-language-for-nutrients
   baseURL: https://api.uat.syndigo.com
+  tags:
+  - Auth
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/syndigo-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/syndigo-auth-api-openapi.yml
   - type: JSONSchema
     url: json-schema/syndigo-post-v2-natural-nutrients-request-schema.json
   - type: JSONSchema
     url: json-schema/syndigo-post-v2-natural-nutrients-response-schema.json
-
+- aid: syndigo:syndigo-natural-api
+  name: Syndigo Natural API
+  description: The Natural API from Syndigo — 1 operation(s) for natural.
+  humanURL: https://docx.syndigo.com/developers/docs/natural-language-for-nutrients
+  baseURL: https://api.uat.syndigo.com
+  tags:
+  - Natural
+  properties:
+  - type: OpenAPI
+    url: openapi/syndigo-natural-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/syndigo-post-v2-natural-nutrients-request-schema.json
+  - type: JSONSchema
+    url: json-schema/syndigo-post-v2-natural-nutrients-response-schema.json
 x-coverage:
   state: none
   reason: no-developer-program
