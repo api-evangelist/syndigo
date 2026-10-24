@@ -28,6 +28,12 @@ modified: '2026-10-12'
 tags:
 - Company
 - Data
+- Master Data Management
+- Product Information Management
+- Syndication
+tags_raw:
+- Company
+- Data
 - MasterDataManagement
 - ProductInformationManagement
 - Syndication
@@ -100,6 +106,8 @@ apis:
   humanURL: https://docx.syndigo.com/developers/docs/natural-language-for-nutrients
   baseURL: https://api.uat.syndigo.com
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
